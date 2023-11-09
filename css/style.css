@@ -37,7 +37,7 @@ body {
 
 nav {
   width: 100%;
-  height: 150px;
+  height: 15vh;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -100,7 +100,7 @@ nav .navigation ul :hover::after {
 /* Front page */
 
 .front-page {
-  height: 70vh;
+  height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -121,7 +121,6 @@ nav .navigation ul :hover::after {
   width: fit-content;
   font-size: 96px;
   font-weight: 200;
-  color: var(--accentColor);
 }
 
 .title-description {
@@ -213,10 +212,34 @@ nav .navigation ul :hover::after {
   max-width: 600px;
 }
 
-.project {
-  margin: 10px 0px;
-  padding: 10px 16px;
-  background-color: var(--accentColor);
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 40px;
+  width: 280px;
+  height: 350px;
+  border: 1px solid var(--strongDetailColor);
+  border-radius: 5px;
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--accentColor);
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.project-card p {
+  font-weight: 100;
+  font-size: 18px;
+  text-align: center;
+  color: var(--strongDetailColor);
+}
+
+.project-card a {
+  justify-self: end;
 }
 
 /*Media queries*/
