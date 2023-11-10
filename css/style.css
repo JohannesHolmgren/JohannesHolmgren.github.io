@@ -6,6 +6,7 @@
   --backgroundColor: #1d1d20;
   --detailColor: #cccccc;
   --strongDetailColor: #ffffff;
+  --lightDetailColor: #141416;
 }
 
 .light-mode {
@@ -25,6 +26,7 @@ body {
   margin: auto;
   --backgroundColor: #B3B3B3;
   --detailColor: #2C2B2B;
+  --lightDetailColor: #d9d9d9;
   --strongDetailColor: #000000;
   --accentColor: #7E8F8C;
 
@@ -209,10 +211,23 @@ nav .navigation ul :hover::after {
 }
 
 .projects {
-  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#project-carousel {
+  display: flex;
+  list-style: none;
+  position: relative;
+  justify-content: center;
 }
 
 .project-card {
+  user-select: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -221,6 +236,38 @@ nav .navigation ul :hover::after {
   height: 350px;
   border: 1px solid var(--strongDetailColor);
   border-radius: 5px;
+  background-color: var(--lightDetailColor);
+  /*transition: all 1s ease;*/
+}
+
+.project-card:hover {
+  background-color: var(--backgroundColor);
+}
+
+/* Show only first three cards */
+.project-card {
+  display: none;
+}
+
+.project-card:nth-child(-n+3){
+  display: flex;
+}
+
+/* Make middle card stand out */
+.project-card:nth-child(2) {
+  z-index: 5;
+}
+
+.project-card:nth-child(1) {
+  scale: 0.9;
+  transform: translateX(40%);
+  filter: blur(1px);
+}
+
+.project-card:nth-child(3) {
+  scale: 0.9;
+  transform: translateX(-40%);
+  filter: blur(1px);
 }
 
 .project-card h3 {
@@ -239,7 +286,7 @@ nav .navigation ul :hover::after {
 }
 
 .project-card a {
-  justify-self: end;
+  margin-top: auto;
 }
 
 /*Media queries*/
@@ -250,6 +297,12 @@ nav .navigation ul :hover::after {
   }
   .description p {
     font-size: 14px;
+  }
+
+  .projects-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
