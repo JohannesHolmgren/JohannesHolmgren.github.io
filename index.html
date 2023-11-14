@@ -25,14 +25,14 @@
         <a href="#"><img src="images/JH.svg" alt="Logo"></a>
         <li>
           <ul><a href="#">Home</a></ul>
-          <ul><a href="#">About</a></ul>
-          <ul><a href="#">Projects</a></ul>
+          <ul><a href="#about-me">About</a></ul>
+          <ul><a href="#projects-page">Projects</a></ul>
           <ul><a href="CV.pdf">Resume</a></ul>
         </li>
       </div>
     </nav>
 
-    <button onclick="toggle()">Toggle Mode</button>
+    <!-- <button onclick="toggle()">Toggle Mode</button> -->
 
     <div class="front-page">
       <div class="welcome">
@@ -50,7 +50,7 @@
         <a href="https://github.com/JohannesHolmgren"><img src="images/github.svg", alt="Link to github"/></a>
       </div>
     </div>
-    <div class="about-me">
+    <div id="about-me">
       <div class="profile-image">
         <div class="profile-background"></div>
         <img src="images/profile.png" alt="image of me">
@@ -64,7 +64,7 @@
       </div>
     </div>
 
-    <div class="projects-page">
+    <div id="projects-page">
       <div class="intro-text">
         <h2>Projects</h2>
         Here are a showcase of projects I have found interesting and wish to share with you.
@@ -74,7 +74,7 @@
           <ul class="project-card" onclick="rotate(this)">
             <h3>Neural Network</h3>
             <p>This is a small neural network package using backpropagation for updating weights and thresholds.</p>
-            <a href="https://github.com/JohannesHolmgren"><img src="images/github.svg", alt="Link to github"/></a>
+            <a href="https://github.com/JohannesHolmgren/Neural-Network"><img src="images/github.svg", alt="Link to github"/></a>
           </ul>
           <ul class="project-card" onclick="rotate(this)">
             <h3>Project Numero 1</h3>

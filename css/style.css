@@ -106,6 +106,7 @@ nav .navigation ul :hover::after {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  margin-bottom: 20vh;
 }
 
 .welcome {
@@ -148,7 +149,7 @@ nav .navigation ul :hover::after {
 }
 
 /* About me */
-.about-me {
+#about-me {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -194,7 +195,7 @@ nav .navigation ul :hover::after {
 
 /* Projects */
 
-.projects-page {
+#projects-page {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -217,6 +218,7 @@ nav .navigation ul :hover::after {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  width: fit-content;
 }
 
 #project-carousel {
@@ -224,6 +226,7 @@ nav .navigation ul :hover::after {
   list-style: none;
   position: relative;
   justify-content: center;
+  width: fit-content;
 }
 
 .project-card {
@@ -237,11 +240,12 @@ nav .navigation ul :hover::after {
   border: 1px solid var(--strongDetailColor);
   border-radius: 5px;
   background-color: var(--lightDetailColor);
-  /*transition: all 1s ease;*/
+  /* transition: all 0.5s ease-in; */
 }
 
 .project-card:hover {
   background-color: var(--backgroundColor);
+ /*  transform: translateY(-10px); */
 }
 
 /* Show only first three cards */
@@ -260,13 +264,13 @@ nav .navigation ul :hover::after {
 
 .project-card:nth-child(1) {
   scale: 0.9;
-  transform: translateX(40%);
+  transform: translateX(40px);
   filter: blur(1px);
 }
 
 .project-card:nth-child(3) {
   scale: 0.9;
-  transform: translateX(-40%);
+  transform: translateX(-40px);
   filter: blur(1px);
 }
 
@@ -299,7 +303,7 @@ nav .navigation ul :hover::after {
     font-size: 14px;
   }
 
-  .projects-page {
+  #projects-page {
     flex-direction: column;
     align-items: center;
     justify-content: center;
