@@ -28,7 +28,7 @@ body {
   --detailColor: #2C2B2B;
   --lightDetailColor: #d9d9d9;
   --strongDetailColor: #000000;
-  --accentColor: #7E8F8C;
+  --accentColor: #7E8F8C; /* 7E8F8C */
 
   background-color: var(--backgroundColor);
   color: var(--detailColor);
