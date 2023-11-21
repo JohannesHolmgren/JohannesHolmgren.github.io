@@ -37,12 +37,15 @@ body {
 
 /* Navigation bar */
 
-nav {
-  width: 100%;
+#navbar {
+  position: fixed;
+  margin: auto;
+  width: 70%;
   height: 15vh;
   display: flex;
   align-items: center;
   justify-content: right;
+  transition: top 0.3s;
 }
 
 .navigation {

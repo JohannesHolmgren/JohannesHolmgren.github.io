@@ -42,3 +42,17 @@ function mailToClipboard(mailAddress) {
   copiedSnackbar.className = "show";
   setTimeout(function(){copiedSnackbar.className = copiedSnackbar.className.replace("show", "");}, 3000);
 }
+
+/* Hide navbar on scroll */
+var prevScrollpos = window.scrollY;
+window.onscroll = function() {
+  var currenScrollPos = window.scrollY;
+  if (prevScrollpos > currenScrollPos) {
+    console.log("showing");
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    
+    document.getElementById("navbar").style.top = "-15vh";
+  }
+  prevScrollpos = currenScrollPos;
+}
