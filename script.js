@@ -32,8 +32,13 @@ function rotate(item) {
   else if (index == 2) {
     projectList.appendChild(projectList.firstElementChild);
   }
-
-
 }
 
-// Nothing
+function mailToClipboard(mailAddress) {
+  // Copy to clipboard
+  navigator.clipboard.writeText(mailAddress);
+  // Show copied text for a short while then make it hidden again
+  var copiedSnackbar = document.getElementById("copied-snackbar");
+  copiedSnackbar.className = "show";
+  setTimeout(function(){copiedSnackbar.className = copiedSnackbar.className.replace("show", "");}, 3000);
+}
