@@ -48,7 +48,6 @@ var prevScrollpos = window.scrollY;
 window.onscroll = function() {
   var currenScrollPos = window.scrollY;
   if (prevScrollpos > currenScrollPos) {
-    console.log("showing");
     document.getElementById("navbar").style.top = "0";
   } else {
     
