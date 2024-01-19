@@ -249,15 +249,17 @@ nav .navigation ul :hover::after {
 
 #projects-page {
   height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
 }
 
 .intro-text {
-  max-width: 600px; 
+  width: 50%; 
+  padding-right: 10%;
 }
 
-.intro-text h2{
+.intro-text h2 {
   font-size: 64px;
   font-weight: 200;
   color: var(--accentColor);
@@ -268,9 +270,9 @@ nav .navigation ul :hover::after {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 100%;
+  width: 50%;
   overflow: hidden;
-  width: fit-content;
+  /* width: fit-content; */
 }
 
 #project-carousel {
@@ -278,7 +280,7 @@ nav .navigation ul :hover::after {
   list-style: none;
   position: relative;
   justify-content: center;
-  width: fit-content;
+  width: 50%;
 }
 
 .project-card {
@@ -287,8 +289,8 @@ nav .navigation ul :hover::after {
   flex-direction: column;
   align-items: center;
   padding: 40px 40px;
-  width: 280px;
-  height: 350px;
+  aspect-ratio: 280 / 350;
+  width: 30%;
   border: 1px solid var(--strongDetailColor);
   border-radius: 5px;
   background-color: var(--lightDetailColor);
