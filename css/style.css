@@ -251,12 +251,15 @@ nav .navigation ul :hover::after {
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .intro-text {
-  width: 50%; 
-  padding-right: 10%;
+  justify-content: center;
+  width: 80%; 
+  padding-right: 3%;
 }
 
 .intro-text h2 {
@@ -265,6 +268,7 @@ nav .navigation ul :hover::after {
   color: var(--accentColor);
 }
 
+/* Not used anymore */
 .projects {
   display: flex;
   justify-content: center;
@@ -280,7 +284,7 @@ nav .navigation ul :hover::after {
   list-style: none;
   position: relative;
   justify-content: center;
-  width: 50%;
+  width: 70%;
 }
 
 .project-card {
@@ -289,12 +293,13 @@ nav .navigation ul :hover::after {
   flex-direction: column;
   align-items: center;
   padding: 40px 40px;
-  aspect-ratio: 280 / 350;
   width: 30%;
+  aspect-ratio: 10%;
   border: 1px solid var(--strongDetailColor);
   border-radius: 5px;
   background-color: var(--lightDetailColor);
   /* transition: all 0.5s ease-in; */
+  display: none;
 }
 
 .project-card:hover {
@@ -303,27 +308,23 @@ nav .navigation ul :hover::after {
 }
 
 /* Show only first three cards */
-.project-card {
-  display: none;
-}
-
 .project-card:nth-child(-n+3){
   display: flex;
 }
 
 /* Make middle card stand out */
 .project-card:nth-child(2) {
-  z-index: 5;
+  /* z-index: 5; */
 }
 
 .project-card:nth-child(1) {
-  scale: 0.9;
+  scale: 1;
   transform: translateX(40px);
   filter: blur(1px);
 }
 
 .project-card:nth-child(3) {
-  scale: 0.9;
+  scale: 1;
   transform: translateX(-40px);
   filter: blur(1px);
 }
